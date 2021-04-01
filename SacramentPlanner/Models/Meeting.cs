@@ -16,7 +16,6 @@ namespace SacramentPlanner.Models
 
         public string SacramentSong { get; set; }
 
-        public ICollection<Speaker> Speakers { get; set; }
         public string ClosingSong { get; set; }
         public string ClosingPrayer { get; set; }
     }
