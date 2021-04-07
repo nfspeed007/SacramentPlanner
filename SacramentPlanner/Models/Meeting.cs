@@ -10,13 +10,13 @@ namespace SacramentPlanner.Models
         public int Id { get; set; }
         
         public DateTime Date { get; set; }
-        public string Conductor { get; set; }
+        public Members Conductor { get; set; }
         public string OpeningSong { get; set; }
-        public string OpeningPrayer { get; set; }
+        public Members OpeningPrayer { get; set; }
 
         public string SacramentSong { get; set; }
 
         public string ClosingSong { get; set; }
-        public string ClosingPrayer { get; set; }
+        public Members ClosingPrayer { get; set; }
     }
 }

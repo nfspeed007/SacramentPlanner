@@ -20,7 +20,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="Conductor" class="control-label"></label>
-                <input asp-for="Conductor" class="form-control" />
+                <select asp-for="Conductor" class="form-control" asp-items="@ViewBag.Members">
+                    <option value="" selected disabled>-- Choose --</option>
+                </select>
                 <span asp-validation-for="Conductor" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -30,7 +32,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="OpeningPrayer" class="control-label"></label>
-                <input asp-for="OpeningPrayer" class="form-control" />
+                <select asp-for="OpeningPrayer" class="form-control" asp-items="@ViewBag.Members">
+                    <option value="" selected disabled>-- Choose --</option>
+                </select>
                 <span asp-validation-for="OpeningPrayer" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -45,8 +49,10 @@
             </div>
             <div class="form-group">
                 <label asp-for="ClosingPrayer" class="control-label"></label>
-                <input asp-for="ClosingPrayer" class="form-control" />
-                <span asp-validation-for="ClosingPrayer" class="text-danger"></span>
+                <select asp-for="ClosingPrayer" class="form-control" asp-items="@ViewBag.Members">
+                    <option value="" selected disabled>-- Choose --</option>
+                </select>
+                <span asp-validation-for="OpeningPrayer" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

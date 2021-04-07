@@ -15,11 +15,13 @@ namespace ContosoUniversity.Data
 
         public DbSet<Meeting> Meetings { get; set; }
         public DbSet<Members> Members { get; set; }
+        public DbSet<Speaker> Speaker { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Meeting>().ToTable("Meeting");
             modelBuilder.Entity<Members>().ToTable("Members");
+            modelBuilder.Entity<Speaker>().ToTable("Speaker");
         }
 
     }

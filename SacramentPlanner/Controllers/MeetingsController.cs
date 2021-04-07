@@ -46,6 +46,7 @@ namespace SacramentPlanner.Controllers
         // GET: Meetings/Create
         public IActionResult Create()
         {
+            ViewData["Members"] = new SelectList(_context.Members, "MembersID", "name");
             return View();
         }
 
@@ -54,7 +55,7 @@ namespace SacramentPlanner.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Date,Conductor,OpeingSong,OpeningPrayer,SacramentSong,ClosingSong,ClosingPrayer")] Meeting meeting)
+        public async Task<IActionResult> Create([Bind("Id,Date,OpeningSong,SacramentSong,ClosingSong")] Meeting meeting)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +87,7 @@ namespace SacramentPlanner.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Date,Conductor,OpeingSong,OpeningPrayer,SacramentSong,ClosingSong,ClosingPrayer")] Meeting meeting)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Date,OpeningSong,SacramentSong,ClosingSong")] Meeting meeting)
         {
             if (id != meeting.Id)
             {

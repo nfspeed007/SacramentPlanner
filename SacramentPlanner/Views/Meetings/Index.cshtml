@@ -16,13 +16,13 @@
                 @Html.DisplayNameFor(model => model.Date)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Conductor)
+                @Html.DisplayNameFor(model => model.OpeningSong)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OpeningPrayer)
+                @Html.DisplayNameFor(model => model.SacramentSong)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ClosingPrayer)
+                @Html.DisplayNameFor(model => model.ClosingSong)
             </th>
             <th></th>
         </tr>
@@ -34,13 +34,13 @@
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Conductor)
+                @Html.DisplayFor(modelItem => item.OpeningSong)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.OpeningPrayer)
+                @Html.DisplayFor(modelItem => item.SacramentSong)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ClosingPrayer)
+                @Html.DisplayFor(modelItem => item.ClosingSong)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
